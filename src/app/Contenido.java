@@ -3,7 +3,7 @@ package app;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Contenido {
+public abstract class Contenido {
 
     public String nombre;
     public Clasificacion clasificacion;
