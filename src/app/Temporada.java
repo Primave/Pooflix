@@ -26,7 +26,7 @@ public class Temporada {
         // si el nro del episo del ciclo es igual a "nro"
         // devolver ese episo
         for (Episodio ep : this.episodios) {
-            if (ep.setnumero(numero) == nro) {
+            if (ep.getNumero() == nro) {
                 return ep;
             }
 

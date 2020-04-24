@@ -1,12 +1,35 @@
 package app;
 
-public class Pelicula extends Contenido {
+import java.util.List;
 
-    public Pelicula(Director director, int duracionEnMinutos){
-        this.director = director;
-        this.duracionEnMinutos = duracionEnMinutos;
-    }
+public class Pelicula extends Contenido implements INnominable {
 
     public Director director;
     public int duracionEnMinutos;
+
+    @Override
+    public boolean ganoPreviamente() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public void reproducirTrailerNominacion() {
+        System.out.println("Reproducindo trailer de pelicula " + this.nombre);
+
+    }
+
+    @Override
+    public void sacarSelfie(List<Actor> elenco) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public boolean estaNominaada() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    
 }

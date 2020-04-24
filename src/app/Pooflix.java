@@ -5,8 +5,10 @@ import java.util.List;
 
 public class Pooflix {
 
-    public List<Pelicula> pelicula = new ArrayList<>();
+    public List<Pelicula> peliculas = new ArrayList<>();
     public List<Serie> series = new ArrayList<>();
+
+    public List<INnominable> nominados = new ArrayList<>();
 
     public Serie buscarSerie(String Titulo) {
         for (Serie s : this.series) {
@@ -18,7 +20,7 @@ public class Pooflix {
     }
 
     public void inicializarCatalogo() {
-
+        inicializarPelis();
         this.inicializarSerie1();
         this.inicializarSerie2();
     }
@@ -130,5 +132,50 @@ public class Pooflix {
         this.series.add(serie2);
 
     }
+
+    public void inicializarPelis() {
+        Pelicula peli = new Pelicula();
+        peli.nombre = "The Shining";
+        Actor actor = new Actor();
+        actor.nombre = "Jack";
+
+        peli.elenco.add(actor);
+
+        this.peliculas.add(peli);
+
+        peli = new Pelicula();
+        peli.nombre = "Deadpool";
+        actor = new Actor();
+        actor.nombre = "Ryan";
+
+        peli.elenco.add(actor);
+
+        this.peliculas.add(peli);
+
+    }
+
+    public void inicializarListaNominados() {
+
+        for (Pelicula peli : this.peliculas) {
+            this.nominados.add(peli);
+            for (Actor actor : peli.elenco)
+                this.nominados.add(actor);
+
+        }
+        for (Serie serie : this.series) {
+            for (Actor actor : serie.elenco)
+                this.nominados.add(actor);
+
+        }
+    }
+
+    public void reproducirTrailersDeNominacion() {
+        for (INnominable nominado : nominados) {
+
+            nominado.reproducirTrailerNominacion();
+        }
+    }
+
+
 
 }
