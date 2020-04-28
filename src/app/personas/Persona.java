@@ -1,4 +1,4 @@
-package app;
+package app.personas;
 
 public abstract class Persona {
 

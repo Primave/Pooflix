@@ -1,6 +1,8 @@
-package app;
+package app.personas;
 
 import java.util.List;
+
+import app.INnominable;
 
 public class Actor extends Persona implements INnominable {
 
