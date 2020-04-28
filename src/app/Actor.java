@@ -12,7 +12,7 @@ public class Actor extends Persona implements INnominable {
 
     @Override
     public void reproducirTrailerNominacion() {
-        System.out.println("Reproducindo trailer de actor " + this.nombre);
+        System.out.println("Reproducindo trailer de actor " + this.getNombre());
 
     }
 

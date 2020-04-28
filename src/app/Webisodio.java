@@ -10,12 +10,19 @@ public class Webisodio extends Episodio {
 
     }
 
-    public String url;
+    private String url;
+
+    public String getUrl() {
+        return this.url;
+    }
+    public void getUrl(String url){
+        this.url = url;
+    }
 
     @Override /// Anotacion que indica que el metodo se sobre - escribe(redefinicion)
     public void reproducir() {
         System.out.println(
-                "Se esta reproduciendo websodio numero: " + this.getNumero() + " " + this.nombre + " url: " + this.url);
+                "Se esta reproduciendo websodio numero: " + this.getNumero() + " " + this.getNombre() + " url: " + this.getUrl());
     }
 
     /**

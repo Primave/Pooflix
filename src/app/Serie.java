@@ -5,15 +5,24 @@ import java.util.List;
 
 public class Serie extends Contenido {
 
-    public List<Temporada> temporadas = new ArrayList<>();
+    private List<Temporada> temporadas = new ArrayList<>();
 
+    public List<Temporada> getTemporadas(){
+        return this.temporadas;
+    }
+    public void setTemporadas(List<Temporada> temporadas) {
+        this.temporadas = temporadas;
+    }
+
+
+    
     public Temporada getTemporada(int nro) {
         // recorrer cada temporada
         // si el nro de temporada del ciclo es igual a "nro"
         // devolver esa temporada
 
         for (Temporada tempo : this.temporadas) {
-            if (tempo.numero == nro) {
+            if (tempo.getNumero() == nro) {
                 return tempo;
             }
         }

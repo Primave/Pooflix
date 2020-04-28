@@ -10,9 +10,9 @@ public class Episodio {
     }
 
     private int numero;
-    public String nombre;
-    public int duracionEnMinutos;
-    public String descripcion;
+    private String nombre;
+    private int duracionEnMinutos;
+    private String descripcion;
 
     //get
     public int getNumero() {
@@ -47,7 +47,7 @@ public class Episodio {
 
     public void reproducir() {
 
-       System.out.print("Reproducindo Episodio " + this.numero + this.nombre);
+       System.out.print("Reproducindo Episodio " + this.getNumero() + this.getNombre());
 
     }
 
